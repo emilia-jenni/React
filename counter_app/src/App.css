@@ -8,8 +8,10 @@
   align-items: center;
 }
 
-button {
-  height: 30px;
-  font-size: 1rem;
-  padding: 5px;
+.even {
+  background-color: lightpink;
+}
+
+.odd {
+  background-color: lavender;
 }
