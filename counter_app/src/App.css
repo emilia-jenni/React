@@ -1,17 +1,57 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  background: linear-gradient(#c7f7f7, #9ff1e9, #5ad6f5) no-repeat fixed center
+    center/cover;
+}
+
 .circle {
-  background-color: grey;
-  height: 100px;
-  width: 100px;
+  background-color: lightgrey;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 40px auto;
+  font-size: 4rem;
 }
 
 .even {
-  background-color: lightpink;
+  background-color: #fde4f6;
+  border: 5px double #fc92de;
 }
 
 .odd {
   background-color: lavender;
+  border: 5px double #c4c4fc;
+}
+
+button {
+  font-size: 1.3rem;
+  margin: 10px auto;
+  border-radius: 5px;
+  background: #cdf2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 class App extends Component {
   state = {
@@ -37,10 +39,12 @@ class App extends Component {
 
     return (
       <div>
+        <Header />
         <h1 className={circleClass}>{this.state.counter}</h1>
         <button onClick={this.addHandler}>Add one</button>
         <button onClick={this.removeHandler}>Remove one</button>
         <button onClick={this.resetHandler}>Reset</button>
+        <Footer />
       </div>
     );
   }
