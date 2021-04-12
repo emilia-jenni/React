@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap");
+
+body {
+  font-family: "Mountains of Christmas", cursive;
+  background-color: #eeecec;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.5rem;
+  background: #000;
+  color: #ca0505;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 20px;
+  box-shadow: 0 0 5px #222121;
+  text-transform: uppercase;
+  font-weight: 600;
+}

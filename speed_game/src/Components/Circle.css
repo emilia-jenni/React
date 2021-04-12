@@ -1,0 +1,31 @@
+.circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.thor {
+  background-color: #00bfff;
+}
+
+.hulk {
+  background-color: #42971b;
+}
+
+.ironman {
+  background-color: #e00303;
+}
+
+.hawkeye {
+  background-color: #ba55d3;
+}
+
+.active {
+  background-image: url("../assets/img/Shield.svg");
+  box-shadow: 0 0 5px gold;
+}
