@@ -1,42 +1,53 @@
 import React, { Component } from "react";
 
 import AnimalCard from "./AnimalCard";
+import SearchBox from "./SearchBox/SearchBox";
 import "./Animal.css";
+
+import { animals } from "./animals"; /*you can rename the constant like import {animals as animalslist} */
 
 class AnimalsLists extends Component {
   state = {
-    animals: [
-      { id: 1, name: "Fox", img: "https://source.unsplash.com/AjZjBEjQ5Cw/" },
-
-      {
-        id: 2,
-        name: "Rabbit",
-        img: "https://source.unsplash.com/hS41iEO300E/",
-      },
-
-      { id: 3, name: "Wolf", img: "https://source.unsplash.com/WFPWB7Vum1E/" },
-    ],
+    animals: animals,
+    searchInput: "",
   };
 
-  clickHandler = (somethingstupid) => {
+  clickHandler = (name) => {
     /*could be name but it can be whatever*/
-    alert("Hello, my name is " + somethingstupid);
+    alert("Hello, my name is " + name);
+  };
+
+  searchValueHandler = (event) => {
+    this.setState({
+      searchInput: event.target.value,
+    });
+    console.log(this.state.searchInput);
   };
 
   render() {
-    const animalslist = this.state.animals.map((whatever) => {
+    const animalFilter = this.state.animals.filter((animals) => {
+      return animals.name
+        .toLocaleLowerCase()
+        .includes(this.state.searchInput.toLocaleLowerCase());
+    });
+
+    const animalslist = animalFilter.map((animals) => {
       /*could be animals but can be whatever */
       return (
         <AnimalCard
-          name={whatever.name}
-          img={whatever.img}
-          clickme={() => this.clickHandler(whatever.name)}
+          name={animals.name}
+          clickme={() => this.clickHandler(animals.name)}
           /*clickme={this.clickHandler.bind(this, whatever.name)}*/
-          key={whatever.id}
+          key={animals.name}
         />
       );
     });
-    return <div className="animallist">{animalslist}</div>;
+    return (
+      <div>
+        <SearchBox search={this.searchValueHandler} />
+        <div className="animallist">{animalslist}</div>;
+      </div>
+    );
   }
 }
 
