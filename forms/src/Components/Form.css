@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+.form {
+  background: rgb(171, 150, 190);
+  color: #222121;
+}
+form {
+  padding: 3rem;
+}
+label {
+  width: 200px;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+form div {
+  margin: 1.5rem;
+}
+
+input,
+textarea,
+select {
+  font-family: "EB Garamond", serif;
+  background: #f4f4f4;
+  border: 1px solid #222121;
+  box-shadow: 0 0 5px #aeaeae;
+  width: 300px;
+  padding: 0.8rem;
+  border-radius: 7px;
+  font-size: 0.7rem;
+}
+
+input[type="submit"] {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  text-transform: uppercase;
+  margin-left: 230px;
+}

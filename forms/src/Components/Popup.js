@@ -1,14 +1,38 @@
 import React from "react";
 
-const Popup = () => {
+import "./Popup.css";
+
+const closeHandler = () => {
+  window.location.reload();
+};
+
+const Popup = ({ firstname, lastname, phonenumber, message, role, submit }) => {
   return (
-    <div>
-      <p placeholder="Enter First Name">{props.firstname}</p>
-      <p placeholder="Enter Last Name">{props.lastname}</p>
-      <p placeholder="Enter Phone Number">{props.number}</p>
-      <p placeholder="Enter Email">{props.email}</p>
-      <p placeholder="Other">{props.roles}</p>
-      <p placeholder="Your Message here">{props.message}</p>
+    <div className="overlay">
+      <div className="popup">
+        <h1>Your Note:</h1>
+        <div>
+          <p>
+            First name: <span>{firstname}</span>
+          </p>
+          <p>
+            Last name<span>{lastname}</span>
+          </p>
+          <p>
+            Phone number: <span>{phonenumber}</span>
+          </p>
+          <p>
+            Role: <span>{role}</span>
+          </p>
+          <p>
+            Message: <span>{message}</span>
+          </p>
+          <button onClick={submit}>Yes, I'm sure</button>
+          <button className="secondary" onClick={closeHandler}>
+            No, I don't want to post it
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

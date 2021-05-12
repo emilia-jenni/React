@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Joaquin",
+      "lastname": "Torres",
+      "phonenumber": "46787543",
+      "message": "hello",
+      "role": "Student"
+    },
+    {
+      "id": 2,
+      "firstname": "Bucky",
+      "lastname": "Barnes",
+      "phonenumber": "97857634",
+      "message": "Benign",
+      "role": "Other"
+    },
+    {
+      "id": 3,
+      "firstname": "Sam",
+      "lastname": "Wilson",
+      "phonenumber": "986985759",
+      "message": "Hi there",
+      "role": "Teacher"
+    }
+  ]
+}
